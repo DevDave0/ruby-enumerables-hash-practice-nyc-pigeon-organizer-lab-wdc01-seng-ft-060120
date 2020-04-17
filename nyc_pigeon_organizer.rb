@@ -14,6 +14,7 @@ def nyc_pigeon_organizer(data)
        
        if !result_hash[name][property].has_key?(desc)
          result_hash[name][property] << desc.to_s 
+       end 
      end 
      
    end 
