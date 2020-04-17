@@ -12,7 +12,7 @@ def nyc_pigeon_organizer(data)
          result_hash[name][property] = [] 
        end 
        
-       if !result_hash[name][property].has_key?(desc)
+       if !result_hash[name][property].include?(desc)
          result_hash[name][property] << desc.to_s 
        end 
      end 
