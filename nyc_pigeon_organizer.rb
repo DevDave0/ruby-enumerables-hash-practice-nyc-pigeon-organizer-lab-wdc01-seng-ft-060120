@@ -1,3 +1,25 @@
 def nyc_pigeon_organizer(data)
-  # write your code here!
+ result_hash = {}
+ 
+ data.each do |property, hash|
+   hash.each do |desc, array| 
+     array.each do |name| 
+       if !result_hash.has_key?(name)
+         result_hash[name] = {}
+       end 
+       
+       if !result_hash[name].has_key?(property)
+         result_hash[name][property] = [] 
+       end 
+       
+       if !result_hash[name][property].include?(desc)
+         result_hash[name][property] << desc.to_s 
+       end 
+     end 
+     
+   end 
+   
+ end
+ result_hash
+ 
 end
