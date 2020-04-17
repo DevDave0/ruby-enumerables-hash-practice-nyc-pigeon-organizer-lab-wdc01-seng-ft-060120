@@ -9,7 +9,11 @@ def nyc_pigeon_organizer(data)
        end 
        
        if !result_hash[name].has_key?(property)
-         
+         result_hash[name][property] = [] 
+       end 
+       
+       if !result_hash[name][property].has_key?(desc)
+         result_hash[name][property] 
      end 
      
    end 
